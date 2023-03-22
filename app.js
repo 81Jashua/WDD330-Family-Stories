@@ -3,9 +3,6 @@ const express = require('express')
 const dotenv = require('dotenv')
 const morgan = require('morgan')
 const exphbs = require('express-handlebars')
-//const hbs = require('express-handlebars')
-const hbs = require('hbs')
-// const helpers = require('handlebars-helpers')
 const methodOverride = require('method-override')
 const passport = require('passport')
 const session = require('express-session')
@@ -68,26 +65,6 @@ app.engine(
   })
 )
 app.set('view engine', '.hbs')
-
-
-
-// Handlebars
-//////hbs.registerPartials(__dirname + '/views/partials');
-//////hbs.registerHelper(__dirname + '/views/helpers/hbs');
-// hbs.registerHelper("./helpers/hbs", function(options) {
-//     return options.fn(formatDate,);
-//   });
-// hbs.registerHelper(formatDate, function(options) {
-//     return options.fn(this);
-// });
-
-//////app.set('views', path.join(__dirname, 'views'));
-//////app.set('view engine', 'hbs');
-
-// handlebar express
-//app.engine('handlebars', hbs.engine);
-//app.set('view engine', 'handlebars');
-//app.set('views', './views/layouts');
 
 // Sessions 
 app.use(session({
